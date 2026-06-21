@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="ink">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="知枢，由玄枢工作室出品的 Markdown 知识库编辑器。">
+  <meta name="theme-color" content="#15121e">
+  <title>知枢 - 写下一念，看见万象相连</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&family=Noto+Sans+SC:wght@400;500;600&family=Noto+Serif+SC:wght@700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳至主要内容</a>
+  <div class="theme-flash" aria-hidden="true"></div>
+  <header class="site-header" data-header>
+    <a class="brand" href="#hero" aria-label="玄枢工作室首页">
+      <img src="assets/xuanshu-logo.png" alt="" width="42" height="42">
+      <span>玄枢工作室</span>
+    </a>
+    <button class="theme-toggle" type="button" data-theme-toggle aria-label="切换纸墨主题" aria-pressed="false">
+      <span class="toggle-track" aria-hidden="true"><span class="toggle-thumb"></span></span>
+      <span class="toggle-label toggle-paper">纸</span>
+      <span class="toggle-divider" aria-hidden="true">/</span>
+      <span class="toggle-label toggle-ink">墨</span>
+    </button>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="hero" aria-labelledby="hero-title">
+      <canvas class="graph-canvas" data-graph aria-hidden="true"></canvas>
+      <div class="hero-vignette" aria-hidden="true"></div>
+      <div class="hero-content">
+        <div class="product-mark reveal">
+          <img src="assets/zhishu-logo.svg" alt="知枢 Logo" width="72" height="72">
+          <span class="eyebrow">ZHISHU / KNOWLEDGE EDITOR</span>
+        </div>
+        <h1 id="hero-title" class="reveal">写下一念，<br><span>看见万象相连</span></h1>
+        <p class="hero-copy reveal">知枢让每一篇笔记记住彼此。从 Markdown 开始，把散落的想法连成可以重返的知识。</p>
+        <div class="hero-actions reveal">
+          <a class="button button-primary" data-download-link href="#" download aria-disabled="true"><span data-download-label>即将上线</span></a>
+          <a class="button button-secondary" href="#write">查看功能</a>
+        </div>
+        <p class="release-meta reveal" data-release-meta>WINDOWS DESKTOP</p>
+      </div>
+      <a class="scroll-cue" href="#write" aria-label="向下查看功能"><span></span>SCROLL TO CONNECT</a>
+    </section>
+
+    <section class="chapter chapter-write" id="write" aria-labelledby="write-title">
+      <div class="chapter-grid">
+        <div class="chapter-copy reveal">
+          <span class="chapter-number">01 / WRITE</span>
+          <h2 id="write-title">写</h2>
+          <p class="chapter-lead">先把思绪写下来，格式和结构交给知枢。</p>
+          <ul class="feature-list">
+            <li><span>Markdown</span> 所见即所得的专注编辑</li>
+            <li><span>Paste</span> 智能粘贴网页与 Word 内容</li>
+            <li><span>Render</span> 表格、公式、代码与 Mermaid 图表</li>
+          </ul>
+        </div>
+        <div class="demo-window editor-demo reveal" aria-label="知枢编辑器界面示意">
+          <div class="window-titlebar"><span class="app-dot"></span><strong>知枢</strong><span class="window-controls">—&nbsp;&nbsp;□&nbsp;&nbsp;×</span></div>
+          <div class="menu-row">文件&nbsp;&nbsp; 编辑&nbsp;&nbsp; 视图&nbsp;&nbsp; 格式&nbsp;&nbsp; 插入&nbsp;&nbsp; 帮助</div>
+          <div class="toolbar"><span>B</span><span><em>I</em></span><span>H#</span><span>“</span><span>&lt;/&gt;</span><span>≡</span><span>☑</span><span>∞</span></div>
+          <div class="document-tab"><span>万象之间.md</span><span>+</span></div>
+          <div class="editor-body">
+            <div class="line-numbers">1<br>2<br>3<br>4<br>5<br>6<br>7</div>
+            <div class="markdown-sheet" contenteditable="true" role="textbox" aria-label="可编辑 Markdown 示例" spellcheck="false"><span class="md-hash">#</span> 万象之间<br><br>一个念头，通常不是孤立的。<br><br>它会想起 <span class="md-link">[[上周的阅读]]</span>，也会走向<br><span class="md-link">[[正在发生的项目]]</span>。<br><br><span class="md-tag">#知识网络</span>&nbsp; <span class="md-tag">#写作</span></div>
+          </div>
+          <div class="statusbar">知枢&nbsp;&nbsp;|&nbsp;&nbsp; 68 字&nbsp;&nbsp;|&nbsp;&nbsp; Markdown <span>100%</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter-connect" id="connect" aria-labelledby="connect-title">
+      <div class="chapter-grid reverse">
+        <div class="chapter-copy reveal">
+          <span class="chapter-number">02 / CONNECT</span>
+          <h2 id="connect-title">连</h2>
+          <p class="chapter-lead">键入两个方括号，让此刻与曾经建立联系。</p>
+          <ul class="feature-list">
+            <li><span>[[link]]</span> 输入时自动补全已有笔记</li>
+            <li><span>Backlinks</span> 从反向链接看见谁正在引用它</li>
+          </ul>
+        </div>
+        <div class="demo-window link-demo reveal">
+          <div class="demo-label">TRY IT / 输入 [[</div>
+          <label for="link-input">在今天的笔记里连接一个想法</label>
+          <div class="input-shell"><span class="prompt">&gt;</span><input id="link-input" data-link-input value="这让我想起 " autocomplete="off"><span class="cursor" aria-hidden="true"></span></div>
+          <div class="suggestions" data-suggestions hidden role="listbox" aria-label="链接补全">
+            <button type="button" role="option" data-note="万象之间"><span>01</span>万象之间<small>2 条反向链接</small></button>
+            <button type="button" role="option" data-note="阅读与记忆"><span>02</span>阅读与记忆<small>5 条反向链接</small></button>
+            <button type="button" role="option" data-note="正在发生的项目"><span>03</span>正在发生的项目<small>3 条反向链接</small></button>
+          </div>
+          <div class="backlink-panel"><span class="panel-title">BACKLINKS / 反向链接</span><p><b>来自《写作的节奏》</b><br>…当笔记开始彼此记住，回顾就不再是翻找。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="chapter chapter-see" id="see" aria-labelledby="see-title">
+      <div class="chapter-grid">
+        <div class="chapter-copy reveal">
+          <span class="chapter-number">03 / SEE</span>
+          <h2 id="see-title">见</h2>
+          <p class="chapter-lead">当笔记足够多，你需要的不是更长的列表，而是一张地图。</p>
+          <ul class="feature-list">
+            <li><span>Graph</span> 从全局图谱里找到知识群落</li>
+            <li><span>#tag</span> 用标签为正在生长的主题命名</li>
+            <li><span>Search</span> 跨文件搜索每一次提及</li>
+          </ul>
+        </div>
+        <div class="map-demo reveal" aria-label="知识图谱视图示意">
+          <canvas data-section-graph aria-hidden="true"></canvas>
+          <div class="map-ui"><span>KNOWLEDGE MAP</span><div class="search-chip">⌕&nbsp; 搜索全库</div></div>
+          <div class="map-legend"><i class="purple"></i>思考 <i class="orange"></i>项目 <i class="blue"></i>阅读</div>
+          <div class="tag-cloud"><button>#知识网络</button><button>#写作</button><button>#阅读</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about" id="about" aria-labelledby="about-title">
+      <div class="about-inner reveal">
+        <span class="chapter-number">XUANSHU STUDIO</span>
+        <h2 id="about-title">玄之又玄，<br>万念归枢</h2>
+        <p>“玄”是黑中带赤的深色，也是对未知的好奇。“枢”是连接与转动的核心。玄枢工作室相信，好工具不应替人思考，而应让每一个念头更易被记住、被重新发现。知枢，就是我们为这件事造的第一枚枢纽。</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-brand"><img src="assets/xuanshu-logo.png" alt="玄枢工作室" width="52" height="52"><span class="plus">+</span><img src="assets/zhishu-logo.svg" alt="知枢" width="48" height="48"></div>
+    <div class="footer-download"><a data-download-link href="#" download aria-disabled="true"><span data-download-label>即将上线</span></a><span data-release-meta>WINDOWS DESKTOP</span></div>
+    <p>© 2026 玄枢工作室. ALL THOUGHTS CONNECT.</p>
+  </footer>
+  <!-- Motion is disabled through prefers-reduced-motion in CSS and JavaScript. -->
+  <script type="module" src="assets/site.js"></script>
+</body>
+</html>

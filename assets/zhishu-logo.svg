@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" width="1024" height="1024">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fefefe"/>
+      <stop offset="55%" style="stop-color:#faf9f6"/>
+      <stop offset="100%" style="stop-color:#f5f0eb"/>
+    </linearGradient>
+
+    <radialGradient id="glow1" cx="45%" cy="48%" r="42%">
+      <stop offset="0%" style="stop-color:#c4b5fd;stop-opacity:0.22"/>
+      <stop offset="50%" style="stop-color:#a78bfa;stop-opacity:0.05"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0"/>
+    </radialGradient>
+
+    <radialGradient id="glow2" cx="55%" cy="52%" r="35%">
+      <stop offset="0%" style="stop-color:#fde68a;stop-opacity:0.2"/>
+      <stop offset="60%" style="stop-color:#fbbf24;stop-opacity:0.04"/>
+      <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0"/>
+    </radialGradient>
+
+    <linearGradient id="layer1" x1="0%" y1="100%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#4f46e5;stop-opacity:0.9"/>
+      <stop offset="100%" style="stop-color:#6366f1;stop-opacity:0.7"/>
+    </linearGradient>
+
+    <linearGradient id="layer2" x1="100%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" style="stop-color:#0ea5e9;stop-opacity:0.8"/>
+      <stop offset="100%" style="stop-color:#38bdf8;stop-opacity:0.65"/>
+    </linearGradient>
+
+    <linearGradient id="layer3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b;stop-opacity:0.85"/>
+      <stop offset="100%" style="stop-color:#fbbf24;stop-opacity:0.6"/>
+    </linearGradient>
+
+    <linearGradient id="glass" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.55"/>
+      <stop offset="30%" style="stop-color:#ffffff;stop-opacity:0"/>
+      <stop offset="100%" style="stop-color:#000000;stop-opacity:0.03"/>
+    </linearGradient>
+
+    <linearGradient id="borderGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#d4d4d8;stop-opacity:0.6"/>
+      <stop offset="50%" style="stop-color:#e5e7eb;stop-opacity:0.35"/>
+      <stop offset="100%" style="stop-color:#d4d4d8;stop-opacity:0.55"/>
+    </linearGradient>
+
+    <filter id="layerShadow">
+      <feGaussianBlur in="SourceAlpha" stdDeviation="16" result="b"/>
+      <feOffset dx="0" dy="6"/>
+      <feComponentTransfer><feFuncA type="linear" slope="0.1"/></feComponentTransfer>
+      <feMerge><feMergeNode/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="softGlow">
+      <feGaussianBlur stdDeviation="3" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+
+    <filter id="bigGlow">
+      <feGaussianBlur stdDeviation="5" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <rect x="16" y="16" width="992" height="992" rx="216" ry="216" fill="url(#bg)"/>
+  <rect x="16" y="16" width="992" height="992" rx="216" ry="216" fill="url(#glow1)"/>
+  <rect x="16" y="16" width="992" height="992" rx="216" ry="216" fill="url(#glow2)"/>
+
+  <g filter="url(#layerShadow)">
+
+    <path d="
+      M 280,780
+      C 260,740 250,690 260,640
+      C 270,580 300,520 340,470
+      C 370,430 400,395 430,360
+      C 460,325 490,295 510,275
+      C 490,310 465,360 445,410
+      C 425,460 410,510 405,560
+      C 400,600 405,635 420,660
+      C 435,685 460,700 490,700
+      C 510,700 530,692 548,678
+      C 530,710 500,740 465,760
+      C 430,780 390,788 355,785
+      C 320,782 295,772 280,755 Z"
+      fill="url(#layer1)"/>
+
+    <path d="
+      M 620,250
+      C 660,290 700,345 725,405
+      C 750,465 760,525 755,580
+      C 750,625 738,660 720,685
+      C 700,710 680,725 660,730
+      C 640,735 625,730 615,720
+      C 625,740 642,755 665,762
+      C 695,770 730,768 760,755
+      C 790,742 815,718 830,690
+      C 845,662 850,632 845,600
+      C 840,560 822,515 795,475
+      C 770,440 740,410 710,385
+      C 690,370 670,358 655,348 Z"
+      fill="url(#layer2)"/>
+
+    <path d="
+      M 380,580
+      C 370,530 385,475 420,430
+      C 455,385 505,355 555,345
+      C 585,338 610,340 625,348
+      C 600,330 565,310 525,305
+      C 480,298 435,308 400,335
+      C 365,362 342,402 332,445
+      C 325,478 328,508 338,530
+      C 345,548 355,562 365,572 Z"
+      fill="url(#layer3)"/>
+  </g>
+
+  <g filter="url(#bigGlow)" transform="translate(640, 280)">
+    <path d="M0,-12 C1.5,-2.5 2.5,-1.5 12,0 C2.5,1.5 1.5,2.5 0,12 C-1.5,2.5 -2.5,1.5 -12,0 C-2.5,-1.5 -1.5,-2.5 0,-12Z"
+          fill="#fbbf24" opacity="0.9"/>
+    <circle cx="0" cy="0" r="2.5" fill="#fef3c7"/>
+  </g>
+
+  <g filter="url(#softGlow)" transform="translate(310, 330)">
+    <path d="M0,-8 C1,-1.5 1.5,-1 8,0 C1.5,1 1,1.5 0,8 C-1,1.5 -1.5,1 -8,0 C-1.5,-1 -1,-1.5 0,-8Z"
+          fill="#e0f2fe" opacity="0.85"/>
+  </g>
+
+  <g filter="url(#softGlow)" transform="translate(490, 240)">
+    <circle cx="0" cy="0" r="2.5" fill="#fde68a"/>
+    <circle cx="0" cy="0" r="5.5" fill="#fbbf24" opacity="0.2"/>
+    <circle cx="0" cy="0" r="9" fill="#f59e0b" opacity="0.06"/>
+  </g>
+
+  <g filter="url(#softGlow)" transform="translate(700, 650)">
+    <circle cx="0" cy="0" r="2" fill="#bae6fd"/>
+    <circle cx="0" cy="0" r="4.5" fill="#38bdf8" opacity="0.2"/>
+    <circle cx="0" cy="0" r="8" fill="#0ea5e9" opacity="0.06"/>
+  </g>
+
+  <rect x="16" y="16" width="992" height="992" rx="216" ry="216" fill="url(#glass)"/>
+
+  <rect x="18" y="18" width="988" height="988" rx="214" ry="214"
+        fill="none" stroke="url(#borderGrad)" stroke-width="2.5"/>
+
+  <path d="M 60 232 A 196 196 0 0 1 256 60"
+        fill="none" stroke="#ffffff" stroke-width="5" opacity="0.4" stroke-linecap="round"/>
+  <path d="M 74 225 A 206 206 0 0 1 234 74"
+        fill="none" stroke="#ffffff" stroke-width="1.5" opacity="0.22" stroke-linecap="round"/>
+</svg>
